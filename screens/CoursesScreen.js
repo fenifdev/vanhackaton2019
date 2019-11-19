@@ -1,16 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button, Image } from 'react-native';
+import { StyleSheet, View, TextInput, Button } from 'react-native';
 import { courses } from '../constants/mocks.js';
 import Course from '../components/Course.js';
 
 const coursesscreen = class CoursesScreen extends React.Component {
   render() {
     const navigation = this.props.navigation;
-    const list_courses = courses.map((course) => { return <Course course={course} />});
+    const list_courses = courses.map((course) => { return <Course key={course.id} course={course} />});
 
     return (
-      <View>
-        <Text>Search Input</Text>
+      <View style={{padding:10}}>
         <TextInput 
           style={styles.inputText}
           autoComplete="off"
@@ -20,7 +19,7 @@ const coursesscreen = class CoursesScreen extends React.Component {
         />
         <Button title="Course" onPress={()=>navigation.navigate('Course')}></Button>
 
-        <View>
+        <View style={{marginTop:10}}>
         { list_courses }
         </View>
       </View>
