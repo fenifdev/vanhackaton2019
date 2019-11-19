@@ -1,9 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, Image } from 'react-native';
+import { courses } from '../constants/mocks.js';
+import Course from '../components/Course.js';
 
 const coursesscreen = class CoursesScreen extends React.Component {
   render() {
     const navigation = this.props.navigation;
+    const list_courses = courses.map((course) => { return <Course course={course} />});
 
     return (
       <View>
@@ -17,14 +20,9 @@ const coursesscreen = class CoursesScreen extends React.Component {
         />
         <Button title="Course" onPress={()=>navigation.navigate('Course')}></Button>
 
-        <Text>Image course</Text>
-        <Text>Title Course</Text>
-        <Text>Description course</Text>
-
-        <Text>Image course</Text>
-        <Text>Title Course</Text>
-        <Text>Description course</Text>
-
+        <View>
+        { list_courses }
+        </View>
       </View>
     );
   }
