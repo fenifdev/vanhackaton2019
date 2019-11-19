@@ -16,6 +16,15 @@ const coursesscreen = class CoursesScreen extends React.Component {
           placeholder="Search"
         />
         <Button title="Course" onPress={()=>navigation.navigate('Course')}></Button>
+
+        <Text>Image course</Text>
+        <Text>Title Course</Text>
+        <Text>Description course</Text>
+
+        <Text>Image course</Text>
+        <Text>Title Course</Text>
+        <Text>Description course</Text>
+
       </View>
     );
   }

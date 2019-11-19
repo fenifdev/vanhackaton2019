@@ -12,6 +12,15 @@ const jobsscreen = class JobsScreen extends React.Component {
           autoCorrect={false}
           placeholder="Search"
         />
+
+        <Text>35 jobs of 40</Text>
+
+        <Text>Title Job</Text>
+        <Text>New badge Job</Text>
+        <Text>Fav Icon Job</Text>
+        <Text>Location Job</Text>
+        <Text>Skills Job</Text>
+        <Text>Title Job</Text>
         <Button title="Apply"></Button>
         <Button title="Skip"></Button>
       </View>
