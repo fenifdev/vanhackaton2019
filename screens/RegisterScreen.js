@@ -9,18 +9,21 @@ const registerscreen = class RegisterScreen extends React.Component {
       <View>
         <Text>Logo VanHack</Text>
         <TextInput 
+          style={styles.inputText}
           autoComplete="off"
           autoCapitalize="none"
           autoCorrect={false}
           placeholder="Username"
         />
         <TextInput 
+          style={styles.inputText}
           autoComplete="off"
           autoCapitalize="none"
           autoCorrect={false}
           placeholder="Email"
         />
         <TextInput 
+          style={styles.inputText}
           autoComplete="off"
           secureTextEntry={true}
           autoCapitalize="none"
@@ -28,6 +31,7 @@ const registerscreen = class RegisterScreen extends React.Component {
           placeholder="Password"
         />
         <TextInput 
+          style={styles.inputText}
           autoComplete="off"
           secureTextEntry={true}
           autoCapitalize="none"
@@ -40,5 +44,18 @@ const registerscreen = class RegisterScreen extends React.Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  mainButton: {
+    backgroundColor: '#0675ce'
+  },
+  inputText: {
+    borderColor: '#c1cbd3', 
+    borderWidth: 1,
+    borderRadius: 5,
+    padding: 10,
+    margin: 5
+  }
+});
 
 export default registerscreen;
