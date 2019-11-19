@@ -1,12 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
-import Badge from '../components/Badge.js';
-import Skill from '../components/Skill.js';
+import Job from '../components/Job.js';
 
 const jobsscreen = class JobsScreen extends React.Component {
   render() {
     return (
-      <View>
+      <View style={{padding:10}}>
         <TextInput 
           style={styles.inputText}
           autoComplete="off"
@@ -16,15 +15,8 @@ const jobsscreen = class JobsScreen extends React.Component {
         />
 
         <Text>35 jobs of 40</Text>
-
-        <Text>Title Job</Text>
-        <Badge text="NEW" textColor="white" backgroundColor="black"/>
-        <Text>Fav Icon Job</Text>
-        <Text>Location Job</Text>
-        <Skill title="PHP" textColor="red" />
-        <Text>Title Job</Text>
-        <Button title="Apply"></Button>
-        <Button title="Skip"></Button>
+        <Job job={{title:'backend engineer', location:'Toronto', description:'this could be a lorem insup this could be a lorem insup this could be a lorem insup'}}/>
+        <Job job={{title:'frontend engineer', location:'Frankfurt', description:'this could be a lorem insup this could be a lorem insup this could be a lorem insup'}}/>
       </View>
     );
   }
@@ -39,7 +31,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     padding: 10,
-    margin: 5
+    marginTop: 5,
+    marginBottom: 5
   }
 });
 

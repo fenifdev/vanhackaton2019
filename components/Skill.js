@@ -11,6 +11,7 @@ const Skill = ({ title, textColor }) => {
 
 const styles = StyleSheet.create({
 	skill: {
+		alignSelf: 'flex-start',
 		borderColor: 'blue',
 		borderWidth: 1,
 		padding: 10
