@@ -9,6 +9,7 @@ export default function JobsScreen() {
       	autoComplete="off"
       	autoCapitalize="none"
         autoCorrect={false}
+        placeholder="Search"
       />
       <Button title="Apply"></Button>
       <Button title="Skip"></Button>

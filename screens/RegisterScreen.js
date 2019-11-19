@@ -9,23 +9,27 @@ export default function RegisterScreen() {
       	autoComplete="off"
       	autoCapitalize="none"
         autoCorrect={false}
+        placeholder="Username"
       />
       <TextInput 
       	autoComplete="off"
       	autoCapitalize="none"
         autoCorrect={false}
-      />
-      <TextInput 
-      	autoComplete="off"
-      	secureTextEntry={true}
-      	autoCapitalize="none"
-        autoCorrect={false}
+        placeholder="Email"
       />
       <TextInput 
       	autoComplete="off"
       	secureTextEntry={true}
       	autoCapitalize="none"
         autoCorrect={false}
+        placeholder="Password"
+      />
+      <TextInput 
+      	autoComplete="off"
+      	secureTextEntry={true}
+      	autoCapitalize="none"
+        autoCorrect={false}
+        placeholder="Re-Password"
       />
       <Button title="Register"></Button>
       <Text>Login</Text>

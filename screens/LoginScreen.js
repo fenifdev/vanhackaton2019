@@ -9,12 +9,14 @@ export default function LoginScreen() {
       	autoComplete="off"
       	autoCapitalize="none"
         autoCorrect={false}
+        placeholder="Username"
       />
       <TextInput 
       	autoComplete="off"
       	secureTextEntry={true}
       	autoCapitalize="none"
         autoCorrect={false}
+        placeholder="Password"
       />
       <Text>Forgot Password?</Text>
       <Button title="Login"></Button>

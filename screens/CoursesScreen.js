@@ -9,6 +9,7 @@ export default function CoursesScreen() {
       	autoComplete="off"
       	autoCapitalize="none"
         autoCorrect={false}
+        placeholder="Search"
       />
     </View>
   );
