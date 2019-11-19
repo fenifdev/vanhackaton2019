@@ -1,18 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, Image, ScrollView} from 'react-native';
 import { events } from '../constants/mocks.js';
+import Event from '../components/Event.js';
 
 export default function EventsScreen() {
-  const events_content = events.map((event) => { return <View key={event.id}>
-      <View style={{height: 150}}>
-        <Image source={require('../assets/images/event-hero.png')} style={{width: '100%', height: '100%'}}/>
-        <Image source={event.countryImage} style={{position: 'absolute', right:10, bottom: -15, marginRight:10}}/>
-      </View>
-        <Text>{event.title}</Text>
-        <Text>{event.date}</Text>
-        <Text>{event.location}</Text>
-        <Text>{event.deadline}</Text>
-    </View> });
+  const events_content = events.map((event) => <Event key={event.id} style={{marginBottom:10}} event={event}/> );
 
   return (
     <ScrollView style={{padding:0}}>
