@@ -13,8 +13,9 @@ const jobsscreen = class JobsScreen extends React.Component {
           autoCorrect={false}
           placeholder="Search"
         />
-
-        <Text>35 jobs of 40</Text>
+        <View style={{ marginTop:10, marginBottom:10 }}>
+          <Text style={{ fontSize: 20 }}>35 jobs of 40</Text>
+        </View>
         <Job job={{title:'backend engineer', location:'Toronto', description:'this could be a lorem insup this could be a lorem insup this could be a lorem insup'}}/>
         <Job job={{title:'frontend engineer', location:'Frankfurt', description:'this could be a lorem insup this could be a lorem insup this could be a lorem insup'}}/>
       </View>

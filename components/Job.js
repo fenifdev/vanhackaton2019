@@ -14,8 +14,17 @@ const Job = ({ job }) => {
 	        <View>
 		        <Text>{ job.location }</Text>
 		        <Text>{ job.description }</Text>
-		        <Skill title="PHP" textColor="red" />
-		        <Button title="Skip"></Button>
+		        <View style={{ flexDirection: 'row', marginTop:10, marginBottom: 10, flexWrap: 'wrap'}}>
+			        <Skill title="PHP" textColor="red" />
+			        <Skill title="JAVASCRIPT" textColor="blue" />
+			        <Skill title="LARAVEL" textColor="grey" />
+			        <Skill title="MSQL" textColor="green" />
+			        <Skill title="LARAVEL" textColor="grey" />
+			        <Skill title="MSQL" textColor="green" />
+		        </View>
+		        <View style={{ marginTop:10, marginBottom: 10}}>
+		        	<Button title="Skip"></Button>
+		        </View>
 		        <Button title="Apply"></Button>
 	        </View>
 		</View>
