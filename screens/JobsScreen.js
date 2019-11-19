@@ -1,10 +1,17 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function JobsScreen() {
   return (
     <View>
-      <Text>Jobs Screen</Text>
+      <Text>Search Input</Text>
+      <TextInput 
+      	autoComplete="off"
+      	autoCapitalize="none"
+        autoCorrect={false}
+      />
+      <Button title="Apply"></Button>
+      <Button title="Skip"></Button>
     </View>
   );
 }

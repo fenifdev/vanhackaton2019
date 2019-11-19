@@ -1,10 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 
 export default function LoginScreen() {
   return (
     <View>
-      <Text>Login Screen</Text>
+      <Text>Logo Vanhack</Text>
+      <TextInput 
+      	autoComplete="off"
+      	autoCapitalize="none"
+        autoCorrect={false}
+      />
+      <TextInput 
+      	autoComplete="off"
+      	secureTextEntry={true}
+      	autoCapitalize="none"
+        autoCorrect={false}
+      />
+      <Text>Forgot Password?</Text>
+      <Button title="Login"></Button>
+      <Text>Register</Text>
     </View>
   );
 }
