@@ -1,27 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { courses } from '../constants/mocks.js';
+import CourseContentItem from '../components/CourseContentItem.js'
 
 export default function CourseScreen() {
+	const course = courses[0];
+	let content = course.content.map((content) => { return <CourseContentItem key={content.id} item={content} /> });
   return (
     <View>
-      <Text>Making the most of vanhack</Text>
-
+      <Text>{course.title}</Text>
       <Text>Content</Text>
 
-      <Text>Icon</Text>
-      <Text>Welcome To Vanhack</Text>
-      <Text>Action</Text>
-      <Text>Icon Verified</Text>
-
-      <Text>Icon</Text>
-      <Text>Welcome To Vanhack</Text>
-      <Text>Action</Text>
-      <Text>Icon Verified</Text>
-
-      <Text>Icon</Text>
-      <Text>Welcome To Vanhack</Text>
-      <Text>Action</Text>
-      <Text>Icon Verified</Text>
+      <View>{content}</View>
     </View>
   );
 }
