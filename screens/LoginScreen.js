@@ -2,6 +2,12 @@ import React from 'react';
 import { StyleSheet, Text, View, Button, TextInput, Image } from 'react-native';
 
 const loginscreen = class LoginScreen extends React.Component {
+  static navigationOptions = ({ navigation }) => {
+    return {
+      header: () => null
+    } 
+  }
+
   render() {
     const navigation = this.props.navigation;
     return (
