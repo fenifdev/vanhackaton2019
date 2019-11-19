@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, ScrollView } from 'react-native';
 import Job from '../components/Job.js';
 
 const jobsscreen = class JobsScreen extends React.Component {
   render() {
     return (
-      <View style={{padding:10}}>
+      <ScrollView style={{padding:10}}>
         <TextInput 
           style={styles.inputText}
           autoComplete="off"
@@ -18,7 +18,7 @@ const jobsscreen = class JobsScreen extends React.Component {
         </View>
         <Job job={{title:'backend engineer', location:'Toronto', description:'this could be a lorem insup this could be a lorem insup this could be a lorem insup'}}/>
         <Job job={{title:'frontend engineer', location:'Frankfurt', description:'this could be a lorem insup this could be a lorem insup this could be a lorem insup'}}/>
-      </View>
+      </ScrollView>
     );
   }
 }

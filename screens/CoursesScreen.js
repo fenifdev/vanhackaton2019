@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, TextInput, Button } from 'react-native';
+import { StyleSheet, View, TextInput, Button, ScrollView } from 'react-native';
 import { courses } from '../constants/mocks.js';
 import Course from '../components/Course.js';
 
@@ -9,7 +9,7 @@ const coursesscreen = class CoursesScreen extends React.Component {
     const list_courses = courses.map((course) => { return <Course key={course.id} course={course} />});
 
     return (
-      <View style={{padding:10}}>
+      <ScrollView style={{padding:10}}>
         <TextInput 
           style={styles.inputText}
           autoComplete="off"
@@ -22,7 +22,7 @@ const coursesscreen = class CoursesScreen extends React.Component {
         <View style={{marginTop:10}}>
         { list_courses }
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }
