@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
+import Badge from '../components/Badge.js';
 
 const jobsscreen = class JobsScreen extends React.Component {
   render() {
@@ -16,7 +17,7 @@ const jobsscreen = class JobsScreen extends React.Component {
         <Text>35 jobs of 40</Text>
 
         <Text>Title Job</Text>
-        <Text>New badge Job</Text>
+        <Badge text="NEW" textColor="white" backgroundColor="black"/>
         <Text>Fav Icon Job</Text>
         <Text>Location Job</Text>
         <Text>Skills Job</Text>
