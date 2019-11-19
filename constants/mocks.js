@@ -54,7 +54,27 @@ const jobs = [
 	}
 ]
 
+const events = [
+	{
+		id: 1,
+		countryImage: require('../assets/images/flag-canada.png'),
+		title: 'Relocation Summit 2019',
+		location: 'Vancouver - Canada',
+		date: 'November 27 - December 4, 2019',
+		deadline: '11/26/2019'
+	},
+	{
+		id: 2,
+		countryImage: require('../assets/images/flag-canada.png'),
+		title: 'VanHackathon',
+		location: 'Vancouver - Canada',
+		date: 'November 15 - 22, 2019',
+		deadline: '11/03/2019'
+	}
+]
+
 export {
 	courses,
-	jobs
+	jobs,
+	events
 }
