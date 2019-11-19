@@ -3,15 +3,35 @@ import { StyleSheet, Text, View, TextInput, Button, Image, ImageBackground } fro
 
 const Course = ({course}) => {
 	return (
-		<View style={{ marginBottom: 10}}>
-			<ImageBackground source={course.image} style={{ height:150, width: '100%', justifyContent: 'flex-end' }}>
-        		<Text style={{color:'white', fontSize: 20, padding: 10, textShadowColor: 'rgba(0, 0, 0, 0.75)',
-  textShadowOffset: {width: -1, height: 1},
-  textShadowRadius: 10}}>{course.title}</Text>
+		<View style={styles.course}>
+			<ImageBackground source={course.image} style={styles.image}>
+        		<Text style={styles.title}>{course.title}</Text>
         	</ImageBackground>
-        	<Text style={{marginTop:10,marginBottom:10}}>{course.description}</Text>
+        	<Text style={styles.description}>{course.description}</Text>
         </View>
 	)
 }
+
+const styles = StyleSheet.create({
+	course: {
+		marginBottom: 10
+	},
+	image: {
+		height:150, 
+		width: '100%', 
+		justifyContent: 'flex-end'
+	},
+	title: {
+		color:'white',
+		fontSize: 20,
+		padding: 10,
+		textShadowColor: 'rgba(0, 0, 0, 0.75)',
+  		textShadowOffset: {width: -1, height: 1},
+  		textShadowRadius: 10
+	},
+	description: {
+		margin:10
+	}
+});
 
 export default Course;
