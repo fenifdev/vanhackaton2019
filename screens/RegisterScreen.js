@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TextInput, Image } from 'react-native';
 import ButtonPrimary from '../components/ButtonPrimary.js';
+import ButtonLink from '../components/ButtonLink.js';
 
 const registerscreen = class RegisterScreen extends React.Component {
   render(){
@@ -45,7 +46,7 @@ const registerscreen = class RegisterScreen extends React.Component {
           <ButtonPrimary text="REGISTER" onPress={()=>navigation.navigate('App')}/>
         </View>
         <View style={{padding:10}}>
-          <Button title="Login" onPress={()=>navigation.navigate('Login')}></Button>
+          <ButtonLink text="Login" onPress={()=>navigation.navigate('Login')}/>
         </View>
       </View>
     );

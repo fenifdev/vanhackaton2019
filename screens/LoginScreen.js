@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, TextInput, Image } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Image } from 'react-native';
 import ButtonPrimary from '../components/ButtonPrimary.js';
+import ButtonLink from '../components/ButtonLink.js';
 
 const loginscreen = class LoginScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -32,11 +33,13 @@ const loginscreen = class LoginScreen extends React.Component {
           autoCorrect={false}
           placeholder="Password"
         />
-        <Text>Forgot Password?</Text>
+        <View style={{flexDirection: 'row', justifyContent: 'flex-end', marginBottom:10, marginTop: 5}}>
+          <ButtonLink text="Forgot Password?" />
+        </View>
         <ButtonPrimary text="LOGIN" onPress={()=>navigation.navigate('App')}/>
       </View>
-      <View style={{padding:10}}>
-        <Button title="Register" onPress={()=>navigation.navigate('Register')}></Button>
+      <View style={{padding:10,marginBottom:10}}>
+        <ButtonLink text="Register" onPress={()=>navigation.navigate('Register')}/>
       </View>
     </View>
   );
