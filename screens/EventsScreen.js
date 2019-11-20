@@ -15,13 +15,15 @@ export default function EventsScreen() {
           <View style={{flexDirection:'row'}}>
             <Image source={events[0].countryImage} style={{marginRight:10}}/>
             <View>
-              <Text>{events[0].title}</Text>
+              <Text style={{fontSize:17}}>{events[0].title}</Text>
               <Text>{events[0].location}</Text>
             </View>
           </View>
           <Text>{events[0].date}</Text>
           <Text>Deadline: {events[0].deadline}</Text>
-          <ButtonPrimary text="See Application"/>
+          <View style={{marginTop:10}}>
+            <ButtonPrimary text="See Application"/>
+          </View>
         </View>
       </View>
       <View style={{padding:10}}>
