@@ -1,8 +1,8 @@
 # VanHackaton2019
 
-This a react native app, to showcase a mvp for a feature that I would like to have it implemented in vanhack.
+This is a react native app, to showcase a mvp for the feature "Skip Job" that I would like to have it implemented in vanhack.
 
----
+The feature skip Job aims to reduce the amount of time that a job seeker spend seeing jobs that are not interested.
 
 ## Instalation:
 
