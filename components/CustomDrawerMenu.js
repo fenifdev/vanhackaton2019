@@ -1,10 +1,9 @@
-import React, {Component} from 'react';
-import {NavigationActions} from 'react-navigation';
-import {ScrollView, Text, View} from 'react-native';
+import React from 'react';
+import {ScrollView, Text, View, Image} from 'react-native';
 import { DrawerItems } from 'react-navigation-drawer';
 import SafeAreaView from 'react-native-safe-area-view';
 
-class CustomDrawerMenu extends Component {
+class CustomDrawerMenu extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -18,10 +17,12 @@ class CustomDrawerMenu extends Component {
 				forceInset={{ top: 'always', horizontal: 'never' }}
 			>
 				<View>
-					<View>
-		          		<Text>User Picture</Text>
-		          		<Text>Mike Maicol Allen</Text>
-		          		<Text>View Profile</Text>
+					<View style={{padding:10, flexDirection:'row', alignItems: 'center'}}>
+						<Image source={require('../assets/images/flag-canada.png')} />
+						<View style={{flex:1,paddingLeft:10,alignContent:'center'}}>
+		          			<Text style={{fontSize:20}}>Mike Maicol Allen</Text>
+		          			<Text>View Profile</Text>
+		          		</View>
 	          		</View>
 	          	</View>
 	          	<DrawerItems {...this.props}/>
