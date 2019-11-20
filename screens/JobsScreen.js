@@ -7,11 +7,16 @@ const jobsscreen = class JobsScreen extends React.Component {
   constructor() {
     super();
     console.log(jobs);
-    this.state = { jobs: jobs };
+    this.state = { jobs: jobs, fullJobs: jobs };
   }
 
   skipJob(job_id) {
-    let jobs = this.state.jobs.filter((job) => { return job.id != job_id });
+    let jobs_filtered = this.state.jobs.filter((job) => { return job.id != job_id });
+    this.setState({jobs:jobs_filtered});
+  }
+
+  reloadJobs() {
+    let jobs = this.state.fullJobs;
     this.setState({jobs:jobs});
   }
 
@@ -19,6 +24,7 @@ const jobsscreen = class JobsScreen extends React.Component {
     const job_contents = this.state.jobs.map((job) => <Job key={job.id} job={job} skipOnPress={() => this.skipJob(job.id) }/>);
     return (
       <ScrollView style={{padding:10}}>
+        {this.state.jobs.length==0 ? <Button title="Reload Jobs" onPress={() => this.reloadJobs() }/> : null }
         <TextInput 
           style={styles.inputText}
           autoComplete="off"
