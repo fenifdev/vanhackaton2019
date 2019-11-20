@@ -1,9 +1,22 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TextInput, ScrollView } from 'react-native';
 import Job from '../components/Job.js';
+import { jobs } from '../constants/mocks.js';
 
 const jobsscreen = class JobsScreen extends React.Component {
+  constructor() {
+    super();
+    console.log(jobs);
+    this.state = { jobs: jobs };
+  }
+
+  skipJob(job_id) {
+    let jobs = this.state.jobs.filter((job) => { return job.id != job_id });
+    this.setState({jobs:jobs});
+  }
+
   render() {
+    const job_contents = this.state.jobs.map((job) => <Job key={job.id} job={job} skipOnPress={() => this.skipJob(job.id) }/>);
     return (
       <ScrollView style={{padding:10}}>
         <TextInput 
@@ -16,8 +29,7 @@ const jobsscreen = class JobsScreen extends React.Component {
         <View style={{ marginTop:10, marginBottom:10 }}>
           <Text style={{ fontSize: 20 }}>35 jobs of 40</Text>
         </View>
-        <Job job={{title:'backend engineer', location:'Toronto', description:'this could be a lorem insup this could be a lorem insup this could be a lorem insup'}}/>
-        <Job job={{title:'frontend engineer', location:'Frankfurt', description:'this could be a lorem insup this could be a lorem insup this could be a lorem insup'}}/>
+        {job_contents}
       </ScrollView>
     );
   }

@@ -6,7 +6,7 @@ import ButtonPrimary from '../components/ButtonPrimary.js';
 import ButtonPrimaryInverse from '../components/ButtonPrimaryInverse.js';
 import { Ionicons } from '@expo/vector-icons';
 
-const Job = ({ job }) => {
+const Job = ({ job, skipOnPress }) => {
 	return (
 		<View style={styles.job}>
 			<View style={{ flexDirection: 'row' }}>
@@ -28,7 +28,7 @@ const Job = ({ job }) => {
 			        <Skill title="MSQL" textColor="green" />
 		        </View>
 		        <View style={{ marginTop:10, marginBottom: 10}}>
-		        	<ButtonPrimaryInverse text="Skip"/>
+		        	<ButtonPrimaryInverse text="Skip" onPress={skipOnPress}/>
 		        </View>
 		        <ButtonPrimary text="Apply" />
 	        </View>

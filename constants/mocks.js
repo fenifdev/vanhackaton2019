@@ -33,6 +33,7 @@ const jobs = [
 	{
 		id: 1,
 		title: 'Front End Developer',
+		description: 'this could be a lorem insup this could be a lorem insup this could be a lorem insup',
 		new: true,
 		location: 'Toronto',
 		skills: [
@@ -44,6 +45,7 @@ const jobs = [
 	{
 		id: 2,
 		title: 'Back End Developer',
+		description: 'this could be a lorem insup this could be a lorem insup this could be a lorem insup',
 		new: false,
 		location: 'Frankfurt',
 		skills: [
