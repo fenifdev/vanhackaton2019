@@ -18,7 +18,10 @@ const Course = ({course, onPress}) => {
 
 const styles = StyleSheet.create({
 	course: {
-		marginBottom: 10
+		marginBottom: 10,
+		borderRadius: 5,
+		borderWidth: 1,
+		borderColor: '#CCC'
 	},
 	image: {
 		height:150, 

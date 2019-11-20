@@ -18,7 +18,7 @@ const coursesscreen = class CoursesScreen extends React.Component {
           placeholder="Search"
         />
 
-        <View style={{marginTop:10}}>
+        <View style={{marginTop:10, marginBottom:10}}>
         { list_courses }
         </View>
       </ScrollView>
