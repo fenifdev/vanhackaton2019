@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, View } from 'react-native';
+import { TouchableNativeFeedback, Image, View } from 'react-native';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer';
@@ -16,7 +16,12 @@ const JobsStackNavigator = createStackNavigator({
   	screen: JobsScreen,
   	navigationOptions: ({navigation}) => ({
       headerLeft: (<View style={{flexDirection:'row', paddingLeft:10}}>
-        <Ionicons name="md-menu" size={30} color="#46c1f1" />
+        <TouchableNativeFeedback
+            background={TouchableNativeFeedback.Ripple('#010101')}
+            onPress={() => navigation.openDrawer()}
+        >
+          <Ionicons name="md-menu" size={30} color="#46c1f1" />
+        </TouchableNativeFeedback>
         <Image style={{marginLeft:10}} source={require('../assets/images/logo.png')}/>
         </View>),
 	})
@@ -28,7 +33,12 @@ const EventsStackNavigator = createStackNavigator({
   	screen: EventsScreen,
   	navigationOptions: ({navigation}) => ({
       headerLeft: (<View style={{flexDirection:'row', paddingLeft:10}}>
-        <Ionicons name="md-menu" size={30} color="#46c1f1" />
+        <TouchableNativeFeedback
+            background={TouchableNativeFeedback.Ripple('#010101')}
+            onPress={() => navigation.openDrawer()}
+        >
+          <Ionicons name="md-menu" size={30} color="#46c1f1" />
+        </TouchableNativeFeedback>
         <Image style={{marginLeft:10}} source={require('../assets/images/logo.png')}/>
         </View>),
 	})
@@ -40,7 +50,12 @@ const CoursesStackNavigator = createStackNavigator({
   	screen: CoursesScreen,
   	navigationOptions: ({navigation}) => ({
       headerLeft: (<View style={{flexDirection:'row', paddingLeft:10}}>
-        <Ionicons name="md-menu" size={30} color="#46c1f1" />
+        <TouchableNativeFeedback
+            background={TouchableNativeFeedback.Ripple('#010101')}
+            onPress={() => navigation.openDrawer()}
+        >
+          <Ionicons name="md-menu" size={30} color="#46c1f1" />
+        </TouchableNativeFeedback>
         <Image style={{marginLeft:10}} source={require('../assets/images/logo.png')}/>
         </View>),
 	})
