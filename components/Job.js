@@ -10,7 +10,7 @@ const Job = ({ job }) => {
 		<View style={styles.job}>
 			<View style={{ flexDirection: 'row' }}>
 				<Text style={{flex:1, fontSize:20}}>{ job.title }</Text>
-				<Badge text="NEW" textColor="white" backgroundColor="black" />
+				<Badge text="NEW" textColor="white" backgroundColor="#0fca9f" />
 				<Text>FAV</Text>
 	        </View>
 	        <View>
