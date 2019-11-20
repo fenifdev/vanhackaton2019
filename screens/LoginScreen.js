@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TextInput, Image } from 'react-native';
+import ButtonPrimary from '../components/ButtonPrimary.js';
 
 const loginscreen = class LoginScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -15,7 +16,7 @@ const loginscreen = class LoginScreen extends React.Component {
       <View style={{marginTop:50,marginBottom:50}}>
         <Image style={styles.logo} source={require('../assets/images/logo.png')}/>
       </View>
-      <View style={{flex:1,marginTop:50, width: '100%'}}>
+      <View style={{flex:1,marginTop:50, width: '100%', padding:10}}>
         <TextInput 
           style={styles.inputText}
           autoComplete="off"
@@ -32,8 +33,7 @@ const loginscreen = class LoginScreen extends React.Component {
           placeholder="Password"
         />
         <Text>Forgot Password?</Text>
-        <Button style={styles.mainButton} title="Login" onPress={()=>navigation.navigate('App')}></Button>
-        
+        <ButtonPrimary text="LOGIN" onPress={()=>navigation.navigate('App')}/>
       </View>
       <View style={{padding:10}}>
         <Button title="Register" onPress={()=>navigation.navigate('Register')}></Button>
@@ -62,7 +62,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     padding: 10,
-    margin: 5
+    marginTop: 5,
+    marginBottom: 5
   }
 });
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TextInput, Image } from 'react-native';
+import ButtonPrimary from '../components/ButtonPrimary.js';
 
 const registerscreen = class RegisterScreen extends React.Component {
   render(){
@@ -41,7 +42,7 @@ const registerscreen = class RegisterScreen extends React.Component {
             autoCorrect={false}
             placeholder="Re-Password"
           />
-          <Button title="Register" onPress={()=>navigation.navigate('App')}></Button>
+          <ButtonPrimary text="REGISTER" onPress={()=>navigation.navigate('App')}/>
         </View>
         <View style={{padding:10}}>
           <Button title="Login" onPress={()=>navigation.navigate('Login')}></Button>
@@ -56,7 +57,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flex: 1,
-    flexDirection: 'column'
+    flexDirection: 'column',
+    padding:10
   },
   logo: {
     height: 40,
@@ -70,7 +72,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     padding: 10,
-    margin: 5
+    marginTop: 5,
+    marginBottom: 5
   }
 });
 
