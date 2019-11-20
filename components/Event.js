@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image } from 'react-native';
+import { EvilIcons } from '@expo/vector-icons';
 
 const Event = ({event}) => {
 	return (
@@ -11,7 +12,10 @@ const Event = ({event}) => {
 	      <View style={styles.eventContainer}>
 	        <Text style={styles.title}>{event.title}</Text>
 	        <Text style={styles.text}>{event.date}</Text>
-	        <Text style={styles.text}>{event.location}</Text>
+	        <View style={{flexDirection:'row'}}>
+	        	<EvilIcons name="location" size={20} color="black" />
+	        	<Text style={[styles.text,{paddingLeft:5}]}>{event.location}</Text>
+	        </View>
 	        <View style={{flexDirection:'row'}}>
 	        	<Text>Deadline:</Text><Text style={styles.text}>{event.deadline}</Text>
 	        </View>
