@@ -1,14 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button, Image, ImageBackground } from 'react-native';
+import { TouchableNativeFeedback, StyleSheet, Text, View, TextInput, Button, Image, ImageBackground } from 'react-native';
 
-const Course = ({course}) => {
+const Course = ({course, onPress}) => {
 	return (
-		<View style={styles.course}>
-			<ImageBackground source={course.image} style={styles.image}>
-        		<Text style={styles.title}>{course.title}</Text>
-        	</ImageBackground>
-        	<Text style={styles.description}>{course.description}</Text>
-        </View>
+		<TouchableNativeFeedback
+			onPress={onPress}
+		>
+			<View style={styles.course}>
+				<ImageBackground source={course.image} style={styles.image}>
+	        		<Text style={styles.title}>{course.title}</Text>
+	        	</ImageBackground>
+	        	<Text style={styles.description}>{course.description}</Text>
+	        </View>
+	    </TouchableNativeFeedback>
 	)
 }
 

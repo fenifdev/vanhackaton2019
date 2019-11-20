@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, View, TextInput, Button, ScrollView } from 'react-native';
+import { StyleSheet, View, TextInput, ScrollView } from 'react-native';
 import { courses } from '../constants/mocks.js';
 import Course from '../components/Course.js';
 
 const coursesscreen = class CoursesScreen extends React.Component {
   render() {
     const navigation = this.props.navigation;
-    const list_courses = courses.map((course) => { return <Course key={course.id} course={course} />});
+    const list_courses = courses.map((course) => { return <Course key={course.id} course={course} onPress={()=>navigation.navigate('Course')} />});
 
     return (
       <ScrollView style={{padding:10}}>
@@ -17,7 +17,6 @@ const coursesscreen = class CoursesScreen extends React.Component {
           autoCorrect={false}
           placeholder="Search"
         />
-        <Button title="Course" onPress={()=>navigation.navigate('Course')}></Button>
 
         <View style={{marginTop:10}}>
         { list_courses }
