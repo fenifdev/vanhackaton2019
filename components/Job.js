@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 import Badge from '../components/Badge.js';
 import Skill from '../components/Skill.js';
 import ButtonPrimary from '../components/ButtonPrimary.js';
+import ButtonPrimaryInverse from '../components/ButtonPrimaryInverse.js';
 
 const Job = ({ job }) => {
 	return (
@@ -24,7 +25,7 @@ const Job = ({ job }) => {
 			        <Skill title="MSQL" textColor="green" />
 		        </View>
 		        <View style={{ marginTop:10, marginBottom: 10}}>
-		        	<Button title="Skip"></Button>
+		        	<ButtonPrimaryInverse text="Skip"/>
 		        </View>
 		        <ButtonPrimary text="Apply" />
 	        </View>
