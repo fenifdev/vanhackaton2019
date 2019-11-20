@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Button, Image, ScrollView} from 'react-native';
 import { events } from '../constants/mocks.js';
 import Event from '../components/Event.js';
+import ButtonPrimary from '../components/ButtonPrimary.js';
 
 export default function EventsScreen() {
   const events_content = events.map((event) => <Event key={event.id} style={{marginBottom:10}} event={event}/> );
@@ -20,7 +21,7 @@ export default function EventsScreen() {
           </View>
           <Text>{events[0].date}</Text>
           <Text>Deadline: {events[0].deadline}</Text>
-          <Button title="See Application"></Button>
+          <ButtonPrimary text="See Application"/>
         </View>
       </View>
       <View style={{padding:10}}>

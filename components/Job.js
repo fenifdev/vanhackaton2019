@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 import Badge from '../components/Badge.js';
 import Skill from '../components/Skill.js';
+import ButtonPrimary from '../components/ButtonPrimary.js';
 
 const Job = ({ job }) => {
 	return (
@@ -25,7 +26,7 @@ const Job = ({ job }) => {
 		        <View style={{ marginTop:10, marginBottom: 10}}>
 		        	<Button title="Skip"></Button>
 		        </View>
-		        <Button title="Apply"></Button>
+		        <ButtonPrimary text="Apply" />
 	        </View>
 		</View>
 	)
