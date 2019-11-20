@@ -9,6 +9,7 @@ import JobsScreen from '../screens/JobsScreen';
 import EventsScreen from '../screens/EventsScreen';
 import CoursesScreen from '../screens/CoursesScreen';
 import CourseScreen from '../screens/CourseScreen';
+import LogoutScreen from '../screens/LogoutScreen';
 import { Ionicons } from '@expo/vector-icons';
 
 const JobsStackNavigator = createStackNavigator({
@@ -65,8 +66,7 @@ const CoursesStackNavigator = createStackNavigator({
   }
 });
 
-
-const MyDrawerNavigator = createDrawerNavigator({ Jobs: JobsStackNavigator, Events: EventsStackNavigator, Courses: CoursesStackNavigator });
+const MyDrawerNavigator = createDrawerNavigator({ Jobs: JobsStackNavigator, Events: EventsStackNavigator, Courses: CoursesStackNavigator, Logout: LogoutScreen });
 const AuthStack = createStackNavigator({ Login: LoginScreen, Register: RegisterScreen });
 
 const Navigator = createSwitchNavigator(
