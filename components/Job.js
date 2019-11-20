@@ -4,14 +4,17 @@ import Badge from '../components/Badge.js';
 import Skill from '../components/Skill.js';
 import ButtonPrimary from '../components/ButtonPrimary.js';
 import ButtonPrimaryInverse from '../components/ButtonPrimaryInverse.js';
+import { Ionicons } from '@expo/vector-icons';
 
 const Job = ({ job }) => {
 	return (
 		<View style={styles.job}>
 			<View style={{ flexDirection: 'row' }}>
-				<Text style={{flex:1, fontSize:20}}>{ job.title }</Text>
-				<Badge text="NEW" textColor="white" backgroundColor="#0fca9f" />
-				<Text>FAV</Text>
+				<View style={{flex:1, flexDirection: 'row'}}>
+					<Text style={{fontSize:20, paddingRight:5}}>{ job.title }</Text>
+					<Badge text="NEW" textColor="white" backgroundColor="#0fca9f" />
+				</View>
+				<Ionicons name="md-star-outline" size={30} color="#7e7e7e" />
 	        </View>
 	        <View>
 		        <Text>{ job.location }</Text>
