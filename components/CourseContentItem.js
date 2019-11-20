@@ -16,7 +16,7 @@ const CourseContentItem = ({ item }) => {
 			{ icon }
 			<View style={{flex:1, paddingLeft: 10, paddingRight: 10}}>
 				<Text style={{ fontSize: 15 }}>{ item.title }</Text>
-				<Text>{ item.type }</Text>
+				<Text style={{ color: '#919191' }}>{ item.type }</Text>
 		    </View>
 		    {item.verified ? icon_verified : null}
 		</View>
@@ -25,11 +25,11 @@ const CourseContentItem = ({ item }) => {
 
 const styles = StyleSheet.create({
 	CourseContentItem: {
-		borderColor: '#CCC',
-		borderWidth: 1,
-		padding: 10,
+		borderBottomColor: '#CCC',
+		borderBottomWidth: 1,
+		padding: 0,
 		paddingTop: 5,
-		paddingBottom: 5,
+		paddingBottom: 10,
 		marginTop: 5,
 		flexDirection: 'row',
 		alignItems: 'center'
