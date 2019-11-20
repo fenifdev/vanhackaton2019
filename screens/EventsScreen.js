@@ -5,7 +5,7 @@ import Event from '../components/Event.js';
 import ButtonPrimary from '../components/ButtonPrimary.js';
 
 export default function EventsScreen() {
-  const events_content = events.map((event) => <Event key={event.id} style={{marginBottom:10}} event={event}/> );
+  const events_content = events.map((event) => <Event key={event.id} event={event}/> );
 
   return (
     <ScrollView style={{padding:0}}>
@@ -25,7 +25,7 @@ export default function EventsScreen() {
         </View>
       </View>
       <View style={{padding:10}}>
-        <Text style={{fontSize:20}}>Next Events</Text>
+        <Text style={{fontSize:20,marginBottom:20}}>Next Events</Text>
 
         {events_content}
         
