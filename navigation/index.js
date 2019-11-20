@@ -11,6 +11,7 @@ import CourseScreen from '../screens/CourseScreen';
 import LogoutScreen from '../screens/LogoutScreen';
 import { Ionicons } from '@expo/vector-icons';
 import Header from '../components/Header.js';
+import CustomDrawerMenu from '../components/CustomDrawerMenu.js';
 
 const JobsStackNavigator = createStackNavigator({
   Jobs: { 
@@ -42,7 +43,7 @@ const CoursesStackNavigator = createStackNavigator({
   }
 });
 
-const MyDrawerNavigator = createDrawerNavigator({ Jobs: JobsStackNavigator, Events: EventsStackNavigator, Courses: CoursesStackNavigator, Logout: LogoutScreen });
+const MyDrawerNavigator = createDrawerNavigator({ Jobs: JobsStackNavigator, Events: EventsStackNavigator, Courses: CoursesStackNavigator, Logout: LogoutScreen }, {contentComponent: CustomDrawerMenu});
 const AuthStack = createStackNavigator({ Login: LoginScreen, Register: RegisterScreen });
 
 const Navigator = createSwitchNavigator(
