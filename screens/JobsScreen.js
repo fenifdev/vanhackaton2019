@@ -33,7 +33,7 @@ const jobsscreen = class JobsScreen extends React.Component {
           placeholder="Search"
         />
         <View style={{ marginTop:10, marginBottom:10 }}>
-          <Text style={{ fontSize: 20 }}>35 jobs of 40</Text>
+          <Text style={{ fontSize: 20 }}>{this.state.jobs.length} jobs of {this.state.fullJobs.length}</Text>
         </View>
         {job_contents}
       </ScrollView>
